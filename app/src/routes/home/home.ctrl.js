@@ -1,13 +1,23 @@
-const hello = (req, res)=>{
+'use strict'
+
+const output = {
+  hello: (req, res) => {
     //기능
-    res.render("home/index");
-};
+    res.render('home/index')
+  },
 
-const login = (req,res)=>{
-    res.render("home/login");
- };
+  login: (req, res) => {
+    res.render('home/login')
+  },
+}
 
- module.exports = {
-    hello,
-    login,
- };
+const process = {
+  login: (req, res) => {
+    console.log(req.body)
+  },
+}
+
+module.exports = {
+  output,
+  process,
+}
