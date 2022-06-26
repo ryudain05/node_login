@@ -3,7 +3,7 @@
 const id = document.querySelector('#id'),
   name = document.querySelector('#name'),
   psword = document.querySelector('#psword'),
-  confirmPsword = document.querySelector('#confirm-psword'),
+  confirmPsword = document.querySelector('#psword'),
   registerBtn = document.querySelector('#button')
 
 registerBtn.addEventListener('click', register)
