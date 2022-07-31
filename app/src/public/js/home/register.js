@@ -32,7 +32,17 @@ function chkPW(pw) {
 
 //회원가입 로직
 function register() {
-  if (!name.value) {
+  var regExp =
+    /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i
+  if (!regExp.test(email.value)) {
+    alert('이메일 형식에 맞춰서 입력하세요.')
+    email.focus()
+    return false
+  } else if (!name.value) {
+    alert('이메일을 입력해주세요.')
+    name.focus()
+    return false
+  } else if (!name.value) {
     alert('이름을 입력해주세요.')
     name.focus()
     return false
