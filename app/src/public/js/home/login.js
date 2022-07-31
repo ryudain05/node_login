@@ -1,6 +1,7 @@
 'use strict'
 
-const id = document.querySelector('#id'),
+//querySelector를 통해 각 변수에 값들 가져와 저장
+const email = document.querySelector('#email'),
   psword = document.querySelector('#psword'),
   loginBtn = document.querySelector('#button')
 
@@ -8,10 +9,11 @@ loginBtn.addEventListener('click', login)
 
 function login() {
   const req = {
-    id: id.value,
+    email: email.value,
     psword: psword.value,
   }
 
+  //fetch를 통해 성공하면 POST형식으로 불러옴, 실패시 에러 콘솔창
   fetch('/login', {
     method: 'POST',
     headers: {
@@ -24,7 +26,7 @@ function login() {
       if (res.success) {
         location.href = '/'
       } else {
-        alert(res.msg)
+        alert('로그인 정보가 틀렸습니다.')
       }
     })
     .catch((err) => {

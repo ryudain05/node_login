@@ -1,5 +1,6 @@
 'use strict'
 
+//경로설정
 const express = require('express')
 const router = express.Router()
 
@@ -11,5 +12,7 @@ router.get('/register', ctrl.output.register)
 
 router.post('/login', ctrl.process.login)
 router.post('/register', ctrl.process.register)
+
+router.post('/overlapCheck', ctrl.process.overlapCheck)
 
 module.exports = router

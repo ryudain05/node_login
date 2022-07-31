@@ -1,0 +1,32 @@
+:root {
+  /*Font Size*/
+  --font-small:12px;
+  --font-medium:18px;
+  --font-large:24px;
+  /*Color*/
+  --white-color:rgb(255,255,255);
+  --gray-color:rgb(204,204,204);
+  --blue-color:#0038FF;
+  --pink-color:rgb(255, 185, 189);
+  /*Size*/
+  --margin-small:12px;
+  --margin-medium:22px;
+  --margin-large:24px;
+  }
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none;}
+img{border: 0;}
+body{font-family: Roboto;}
+
+a:link {
+	color:rgb(0, 0, 0);
+}
+a:visited{
+	color:black;
+}
+a{
+	text-decoration:none;
+}
+
+
